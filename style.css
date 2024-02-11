@@ -1,0 +1,116 @@
+:root {
+    --charcoal: #1e2019;
+    --moonstone: #69a2b0;
+    --green: #caff8a;
+    --orange: #f18f01;
+    --blue: #3366cc;
+}
+
+html { 
+    background-color: white;
+    font-size: 18px;
+    color: var(--charcoal);
+}
+
+body {
+    margin: 0 auto;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 350px 1fr;
+    font-family: "interstate-mono", monospace;
+}
+
+#siteSidebar, #siteContent {
+    position: relative;
+    display: block;
+}
+
+#siteContent {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden auto;
+}
+
+#contentContainer {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#siteSidebar {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+    border-right: 1px solid var(--charcoal);
+    padding: 40px;
+}
+
+#sidebarBranding { width: 100% }
+
+#brandingLogo {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+#brandingLogo img {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+}
+
+#brandingTitle {
+    text-align: center;
+    font-size: 20px;
+    margin: 60px 0 0 0;
+}
+
+#sidebarNavigation { font-size: 0 }
+
+#sidebarNavigation a {
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--charcoal);
+    margin: 0 0 30px 0;
+    transition: color .2s ease-in-out;
+}
+
+#sidebarNavigation a:last-of-type { margin: 0 }
+
+#sidebarNavigation a.linkPortfolio:hover { color: var(--moonstone) }
+#sidebarNavigation a.linkAbout:hover     { color: var(--green)     }
+#sidebarNavigation a.linkContact:hover   { color: var(--orange)    }
+#sidebarNavigation a.linkStore:hover     { color: var(--blue)      }
+
+#sidebarFooter {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    align-content: end;
+    gap: 20px;
+}
+
+#footerIcons { font-size: 0 }
+
+#footerIcons .icon {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
+
+#footerIcons .icon:last-of-type { margin: 0 }
+
+#footerIcons a img { height: 40px }
+
+#sidebarFooter p {
+    margin: 0;
+    font-size: .8rem;
+}
