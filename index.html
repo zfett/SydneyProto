@@ -8,28 +8,43 @@
 
         <link rel="stylesheet" href="https://use.typekit.net/mkn7isu.css">
         <link rel="stylesheet" href="./style.css" type="text/css">
-        <script defer src="./main.js" type="text/javascript"></script>
+        <script src="./main.js" defer></script>
     </head>
     <body>
+        <header id="siteHeader">
+            <div id="headerContainer">
+                <a href="./index.html">
+                    <div id="brandingLogo">
+                        <img src="./img/logo.png">
+                    </div>
+                </a>
+                <nav id="headerNavigation">
+                    <a href="./portfolio.html">PORTFOLIO</a>
+                    <a href="./about.html">ABOUT</a>
+                    <a href="./contact.html">CONTACT</a>
+                    <a href="./store.html">STORE</a>
+                </nav>
+            </div>
+        </header>
         <aside id="siteSidebar">
             <div id="sidebarBranding">
                 <a href="./index.html">
                     <div id="brandingLogo">
-                        <img src="./logo.png">
+                        <img src="./img/logo.png">
                     </div>
                 </a>
                 <h1 id="brandingTitle">SYDNEY HUGHES</h1>
             </div>
             <nav id="sidebarNavigation">
-                <a class="linkPortfolio" href="./index.html">PORTFOLIO</a>
+                <a class="linkPortfolio" href="./portfolio.html">PORTFOLIO</a>
                 <a class="linkAbout" href="./about.html">ABOUT</a>
                 <a class="linkContact" href="./contact.html">CONTACT</a>
                 <a class="linkStore" href="./store.html">STORE</a>
             </nav>
             <footer id="sidebarFooter">
                 <div id="footerIcons">
-                    <a href="#" class="icon instagram"><img src="./instagram.svg"></a>
-                    <a href="#" class="icon youtube"><img src="./youtube.svg"></a>
+                    <a href="#" class="icon instagram"><img src="./img/instagram.svg"></a>
+                    <a href="#" class="icon youtube"><img src="./img/youtube.svg"></a>
                 </div>
                 <p>SYDNEYHUGHESART@GMAIL.COM</p>
                 <p>SYDNEY HUGHES 2024 &copy;</p>
@@ -37,6 +52,32 @@
         </aside>
         <main id="siteContent">
             <div id="contentContainer">
+                <div id="projectGrid">
+                    <div class="gridItem left">
+                        <div class="card">
+                            <a href="index.html"><img src="./img/card1.jpg"></a>
+                        </div>
+                        <div class="card hidden">
+                            <a href="./project/test.html"><img src="./img/test.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="gridItem center">
+                        <div class="card">
+                            <a href="index.html"><img src="./img/card2.jpg"></a>
+                        </div>
+                        <div class="card hidden">
+                            <a href="./project/test.html"><img src="./img/test.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="gridItem right">
+                        <div class="card">
+                            <a href="index.html"><img src="./img/card3.jpg"></a>
+                        </div>
+                        <div class="card hidden">
+                            <a href="./project/test.html"><img src="./img/test.jpg"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </body>
