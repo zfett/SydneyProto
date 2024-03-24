@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ site.title }}</title>
+        <link rel="icon" href="/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://use.typekit.net/mkn7isu.css">
+        <link rel="stylesheet" href="/assets/style.css" type="text/css">
+        <script src="/assets/main.js" defer></script>
+    </head>
+    <body>
+        {% include sidebar.html %}
+        <main id="siteContent">
+            <div id="contentContainer">
+                {{ content }}
+            </div>
+        </main>
+    </body>
+</html>

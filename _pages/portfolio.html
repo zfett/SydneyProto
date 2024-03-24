@@ -1,0 +1,15 @@
+---
+title: "Portfolio"
+nav-order: 1
+---
+<div id="projectImageContainer">
+    {% for project in site.posts %}
+    <div class="projectImage">
+        {% if project.cover %}
+        <a href="{{ project.url }}"><img src="{{ project.cover }}" alt="{{ project.title }}"></a>
+        {% else %}
+        <a href="{{ project.url }}"><img src="{{ project.images[0].url }}" alt="{{ project.images[0].alt }}"></a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

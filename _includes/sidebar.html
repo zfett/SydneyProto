@@ -1,0 +1,43 @@
+{% assign nav-links = site.pages | sort: "nav-order" %}
+<header id="siteHeader">
+    <div id="headerContainer">
+        <a href="/">
+            <div id="brandingLogo">
+                <img src="/img/logo.png">
+            </div>
+        </a>
+        <nav id="headerNavigation">
+            {% for page in nav-links %}
+            {% if page.nav != false %}
+            <a href="{{ page.url }}">{{ page.title | upcase }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+<aside id="siteSidebar">
+    <div id="sidebarBranding">
+        <a href="/">
+            <div id="brandingLogo">
+                <img src="/assets/img/logo.png">
+            </div>
+        </a>
+        <h1 id="brandingTitle">{{ site.title | upcase }}</h1>
+    </div>
+    <nav id="sidebarNavigation">
+        {% for page in nav-links %}
+        {% if page.nav != false %}
+        <a href="{{ page.url }}">{{ page.title | upcase }}</a>
+        {% endif %}
+        {% endfor %}
+    </nav>
+    <footer id="sidebarFooter">
+        <div id="footerIcons">
+            {% for link in site.data.social-links %}
+            <a href="{{ link.url }}" class="icon"><img src="{{ link.icon }}"></a>
+            {% endfor %}
+        </div>
+        <p>SYDNEYHUGHESART@GMAIL.COM</p>
+        <p>SYDNEY HUGHES 2024 &copy;</p>
+    </footer>
+</aside>

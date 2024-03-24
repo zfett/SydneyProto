@@ -1,0 +1,59 @@
+---
+title: "Home"
+permalink: /
+nav: false
+---
+{% assign projects = site.posts | limit: 3 %}
+<div id="projectGrid">
+    <div class="gridItem left">
+        {% if projects[0] %}
+        <div class="card">
+            <a href="{{ projects[0].url }}"><img src="{{ projects[0].images[0].url }}" alt="{{ projects[0].images[0].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[1] %}
+        <div class="card hidden">
+            <a href="{{ projects[1].url }}"><img src="{{ projects[1].images[0].url }}" alt="{{ projects[1].images[0].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[2] %}
+        <div class="card hidden">
+            <a href="{{ projects[2].url }}"><img src="{{ projects[2].images[0].url }}" alt="{{ projects[2].images[0].alt }}"></a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="gridItem center">
+        {% if projects[0] %}
+        <div class="card">
+            <a href="{{ projects[0].url }}"><img src="{{ projects[0].images[1].url }}" alt="{{ projects[0].images[1].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[1] %}
+        <div class="card hidden">
+            <a href="{{ projects[1].url }}"><img src="{{ projects[1].images[1].url }}" alt="{{ projects[1].images[1].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[2] %}
+        <div class="card hidden">
+            <a href="{{ projects[2].url }}"><img src="{{ projects[2].images[1].url }}" alt="{{ projects[2].images[1].alt }}"></a>
+        </div>
+        {% endif %}
+    </div>
+    <div class="gridItem right">
+        {% if projects[0] %}
+        <div class="card">
+            <a href="{{ projects[0].url }}"><img src="{{ projects[0].images[2].url }}" alt="{{ projects[0].images[2].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[1] %}
+        <div class="card hidden">
+            <a href="{{ projects[1].url }}"><img src="{{ projects[1].images[2].url }}" alt="{{ projects[1].images[2].alt }}"></a>
+        </div>
+        {% endif %}
+        {% if projects[2] %}
+        <div class="card hidden">
+            <a href="{{ projects[2].url }}"><img src="{{ projects[2].images[2].url }}" alt="{{ projects[2].images[2].alt }}"></a>
+        </div>
+        {% endif %}
+    </div>
+</div>

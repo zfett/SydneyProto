@@ -1,0 +1,64 @@
+title: "Sydney Hughes"
+author:
+  name: "Sydney Hughes"
+  email: ""
+description: ""
+
+baseurl: ""
+url: ""
+
+safe: true
+disable_disk_cache: true
+timezone: "America/Kentucky/Monticello"
+encoding: "utf-8"
+future: true
+show_drafts: false
+unpublished: false
+incremental: true
+highlighter: none
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-external-links
+
+sass:
+  style: compressed
+
+kramdown:
+    syntax_highlighter_opts:
+      disable: true
+
+include: ["_pages", "__*.css"]
+
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "netlify.toml",
+  "package.json",
+  "package-lock.json",
+  ".gitattributes",
+  ".gitignore",
+  "_config.yml",
+  "LICENSE",
+  "README.md"
+]
+
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      permalink: /:basename/
+      layout: default
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      permalink: /:categories/:title/
+      categories: project
+      layout: post
